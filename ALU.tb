@@ -1,0 +1,58 @@
+module ALU_tb;
+  // Parámetros
+  parameter DELAY = 10;
+
+  // Señales de entrada
+  logic [63:0] a, b;
+  logic [3:0] sel;
+
+  // Señales de salida
+  logic z;
+  logic [63:0] q;
+
+  // Instancia del DUT (Device Under Test)
+  ALU dut (
+    .a(a),
+    .b(b),
+    .sel(sel),
+    .z(z),
+    .q(q)
+  );
+
+  // Estímulo
+  initial begin
+    // Caso de prueba 1: Suma
+    a = 8'h0A;
+    b = 8'h05;
+    sel = 4'b0000;
+    #DELAY;
+    
+    // Caso de prueba 2: Resta
+    a = 8'h0A;
+    b = 8'h05;
+    sel = 4'b0001;
+    #DELAY;
+    
+    // Caso de prueba 3: AND
+    a = 8'h0A;
+    b = 8'h05;
+    sel = 4'b0010;
+    #DELAY;
+    
+    // Caso de prueba 4: OR
+    a = 8'h0A;
+    b = 8'h05;
+    sel = 4'b0011;
+    #DELAY;
+    
+    // Otros casos de prueba...
+    
+    // Finalizar la simulación
+    $finish;
+  end
+
+  // Simular los cambios en las entradas
+  always #5 a = $random;
+  always #5 b = $random;
+  always #5 sel = $random;
+endmodule
