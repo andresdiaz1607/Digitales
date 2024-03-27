@@ -1,0 +1,38 @@
+Command: vcs -Mupdate BancoRegistros_tb2.sv -full64 -debug_acc+all+dmptf -debug_region+cell+encrypt \
+-sverilog -l log
+                         Chronologic VCS (TM)
+       Version R-2020.12-SP2_Full64 -- Wed Mar 27 15:55:14 2024
+
+                    Copyright (c) 1991 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+Parsing design file 'BancoRegistros_tb2.sv'
+Parsing included file 'BancoRegistros.sv'.
+Parsing included file 'MuxParam.sv'.
+Parsing included file 'Onehot.sv'.
+Back to file 'MuxParam.sv'.
+Back to file 'BancoRegistros.sv'.
+Parsing included file 'hotbit.sv'.
+Back to file 'BancoRegistros.sv'.
+Parsing included file 'RegistroFFD.sv'.
+Back to file 'BancoRegistros.sv'.
+Back to file 'BancoRegistros_tb2.sv'.
+
+Warning-[NZIR] Incorrect size number
+BancoRegistros_tb2.sv, 20
+  The specified width is '0'. Nonzero unsigned decimal number is required as 
+  the size constant. This '0' width will be ignored.
+
+
+Error-[SE] Syntax error
+  Following verilog source has syntax error :
+  "BancoRegistros_tb2.sv", 22: token is 'ciclo'
+        ciclo = ciclo + 1
+             ^
+
+1 warning
+1 error
+CPU time: .213 seconds to compile

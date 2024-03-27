@@ -1,0 +1,38 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        1
+    ],
+    "MuxParam_0000": [
+        "MuxParam_0000",
+        "G8BQV",
+        "module",
+        2
+    ],
+    "hotbit_0000": [
+        "hotbit_0000",
+        "Yfz3H",
+        "module",
+        5
+    ],
+    "BancoRegistros_0000": [
+        "BancoRegistros_0000",
+        "Dxh1u",
+        "module",
+        6
+    ],
+    "BancoRegistros_tb2": [
+        "BancoRegistros_tb2",
+        "fCTME",
+        "module",
+        4
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        3
+    ]
+}
