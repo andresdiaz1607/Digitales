@@ -14,20 +14,27 @@ always_comb
       case(sel)
         0000: assign q = a+b; //Función de suma
         
-        0001: bn= (a<b)? a: b;
+        0001: begin
+              bn= (a<b)? a: b;
               bj= (a<b)? b: a;
               bn = ~bn +1;
               sub = bj + bn;
               if (sub == 64'b0) assign z = 1;
               else assign q = sub;
+        end
 
-        0010: assign q = a&&b ; //Función AND
+        0010: begin
+              assign q = a&&b ; //Función AND
               assign z = 0;
-
-        0011: assign q = a||b; //Función OR
+        end
+        0011: begin  
+              assign q = a||b; //Función OR
               assign z = 0;
-        
-        default: assign z = 1;
+        end
+        default: begin
+                assign z = 1;
                 assign q = 0;
+        end
+endcase
 end
 endmodule
