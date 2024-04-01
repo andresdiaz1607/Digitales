@@ -1,0 +1,28 @@
+module codificador(
+  input logic [6:0] int,
+  output logic [6:0] ins
+);
+
+// Asignación del ins 
+always_comb begin
+    case(int)
+        7'0000001:
+              assign ins = 7'b0000001 //función ADD
+       7'0000010:
+              assign ins = 7'b0000010 //función SUB
+       7'0000100:
+              assign ins = 7'b0000100 //función AND
+        7'0001000:
+              assign ins = 7'b0001000 //función OR
+        7'0010000:
+              assign ins = 7'b0010000 //función ld
+        7'0100000:
+              assign ins = 7'b0100000 //función sd
+        7'1000000:
+              assign ins = 7'b1000000 //función bed
+      
+        default: ins = 7'b0000000; // Código por defecto si la entrada no es 1
+    endcase
+end
+
+endmodule
