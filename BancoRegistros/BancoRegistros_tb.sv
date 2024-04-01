@@ -10,37 +10,62 @@ module BancoRegistros_tb #(parameter N = 32, Bits=64);
   wire [Bits-1:0] data_rd_1;
   wire [Bits-1:0] data_rd_2;
   BancoRegistros #(.N(N), .Bits(Bits)) DUT (.ptr_rd_1(ptr_rd_1), .ptr_rd_2(ptr_rd_2), .ptr_wr(ptr_wr), .data_wr(data_wr), .wr_en(wr_en), .rst(rst), .clk(clk), .data_rd_1(data_rd_1), .data_rd_2(data_rd_2));
-  always #50 clk=~clk;
+  always #10 clk=~clk;
   initial begin
-    clk = 0;
-    rst = 1;
-    #10;
-    rst = 0;
+    wr_en = 1'b0;
     ptr_wr = 5'd0;
+    data_wr = 64'd0;
     ptr_rd_1 = 5'd0;
     ptr_rd_2 = 5'd0;
     $dumpfile ("BancoRegistros.vcd");
     $dumpvars (5,DUT);
-    ptr_rd_1 = 5'd1;
-    ptr_rd_2 = 5'd4;
+    clk = 0;
+    rst = 1;
+    #20;
+    rst = 0;
     wr_en = 1'b1;
+    #20;
+    ptr_wr = 5'd1;
+    data_wr = 64'd10;
+    #20
+    ptr_wr = 5'd2;
+    data_wr = 64'd20;
+    #20
+    ptr_wr = 5'd3;
+    data_wr = 64'd30;
+    #20
+    ptr_wr = 5'd4;
+    data_wr = 64'd40;
+    #20
+    ptr_wr = 5'd5;
+    data_wr = 64'd50;
+    #20
+    ptr_wr = 5'd6;
+    data_wr = 64'd60;
+    #20
+    ptr_rd_1 = 5'd1;
+    ptr_rd_2 = 5'd2;
+    #20
+    ptr_rd_1 = 5'd3;
+    ptr_rd_2 = 5'd4;
+    wr_en = 1'b0;
     data_wr = 64'd1;
     ptr_wr = 5'd1;
-    #50;
+    #20;
     data_wr = 64'd2;
     ptr_wr = 5'd2;
-    #50;
-    ptr_rd_1 = 5'd2;
-    ptr_rd_2 = 5'd3;
+    #20;
+    ptr_rd_1 = 5'd5;
+    ptr_rd_2 = 5'd6;
     data_wr = 64'd3;
     ptr_wr = 5'd3;
-    #50;
+    #20;
     data_wr = 64'd4;
     ptr_wr = 5'd4;
-    #50;
-    ptr_rd_1 = 5'd0;
-    ptr_rd_2 = 5'd4;
-    #150
+    #20;
+    ptr_rd_1 = 5'd1;
+    ptr_rd_2 = 5'd2;
+    #40
     $finish;
   end
 endmodule
