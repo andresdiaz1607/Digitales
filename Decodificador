@@ -19,78 +19,79 @@ logic sub;
 
 //Ejecución de todo el diagramada
 always_comb begin
-  sel_1 = int[6:2];
-  sel_2 = int[14:12];
-  sel_3 = int[31:27];
-  
-
+	//definicion de selectores
+	sel_1 = int[6:2];
+	sel_2 = int[14:12];
+	sel_3 = int[31:27];
+  	//Inicio de Variables en 0
 	ld = 0;
-  sd = 0;
-  beq = 0;
-  and = 0;
-  or = 0;
-  add = 0;
-  sub = 0;
-
-
-
-
-
-begin
-      case(sel_1)
-        00000:
-		ld = 1; 
-        01000:
-		ld = 0;
-		sd = 1;
-          
-
-        01100:
-		//siguiente multiplexor concatenado 
-		begin 
-			case(sel_2)
-				000:
+	sd = 0;
+	beq = 0;
+	and = 0;
+	or = 0;
+	add = 0;
+	sub = 0;
+		begin
+      		case(sel_1)
+       			 00000:
+				ld = 1; 
+        		01000:
+				ld = 0;
+				sd = 1;
+        		01100:
+				//siguiente multiplexor concatenado 
+				begin 
+				case(sel_2)
+					000:
 					//Tercer Mux concatenado 
-					begin 
+						begin 
 						case(sel_3)
-							00000:begin
-							//SUB
+							00000:
+							begin
+								//SUB
                           					sub = 1;
 								add = 0;
 								beq = 0;
 							end
 
-                        				01000:begin
-                            				//ADD
+                        				01000:
+							begin
+                            					//ADD
 	                          				sub = 0;
 								add = 1;	
 								beq = 0;
 							end
-                       			end
-					//Fin del tercer mux
-                    		111:
-                        	//AND  
-                        		and = 1;
-                        		or = 0;
-                   		 110:
-                        	//OR
-                       			 or = 1;
-                        		and = 0;
-             			 end
+                       				endcase
+						//Fin del tercer mux
+                    			111:
+					begin
+                        			//AND  
+                        			and = 1;
+                        			or = 0;
+					end
+                   		 	110:
+					begin
+                        			//OR
+                       				 or = 1;
+                        			and = 0;
+             				 end
+				endcase
 				//Fin del segundo MUX
 
-        11000:
-          	beq = 1;
-
-        default:
-         	ld = 0;
-  		sd = 0;
-  		beq = 0;
-  		and = 0;
- 		or = 0;
-  		add = 0;
-  		sub = 0;
-
-end
+       			11000:
+			begin
+          			beq = 1;
+			end
+        		default: 
+			begin
+         			ld = 0;
+  				sd = 0;
+  				beq = 0;
+  				and = 0;
+ 				or = 0;
+  				add = 0;
+  				sub = 0;
+			end
+endcase
 end
 endmodule
