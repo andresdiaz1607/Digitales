@@ -19,7 +19,10 @@ always_comb
               bj= (a<b)? b: a;
               bn = ~bn +1;
               sub = bj + bn;
-              if (sub == 64'b0) assign z = 1;
+              if (sub == 64'b0) begin
+                                assign z = 1;
+                                assign q = 0;
+                              end
               else assign q = sub;
         end
 
@@ -32,7 +35,7 @@ always_comb
               assign z = 0;
         end
         default: begin
-                assign z = 1;
+                assign z = 0;
                 assign q = 0;
         end
 endcase
