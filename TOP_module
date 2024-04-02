@@ -1,0 +1,19 @@
+module top_module;
+
+  // Declaración de señales de interconexión
+  logic [6:0] int_a;
+  logic [31:0] int_b;
+
+  // Instanciación de los módulos
+  codificador instancia_codificador (
+    .int(int_a),
+    .ins(int_b[6:0])
+  );
+
+  decodificador instancia_decodificador (
+    .int(int_b)
+  );
+
+  // Aquí puedes hacer cualquier cosa con las señales interconectadas
+
+endmodule
