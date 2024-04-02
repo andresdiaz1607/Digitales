@@ -54,5 +54,8 @@ module ALU_tb;
   // Simular los cambios en las entradas
   always #5 a = $random;
   always #5 b = $random;
-  always #5 sel = $random;
+  always #5 begin
+    // Generar un valor aleatorio para sel, limitado a los valores permitidos
+    sel = $urandom_range(0, 3);
+  end
 endmodule
