@@ -39,56 +39,58 @@ always_comb begin
 begin
       case(sel_1)
         00000:
-					ld = 1; 
+		ld = 1; 
         01000:
-					ld = 0;
-					sd = 1;
+		ld = 0;
+		sd = 1;
           
 
         01100:
-					//siguiente multiplexor concatenado 
-              begin 
-                 case(sel_2)
-                    000:
-											//Tercer Mux concatenado 
-                      begin 
-                    		case(sel_3)
-                      		00000:
-                            //SUB
-                          	sub = 1;
-														add = 0;
-														beq = 0;
-                        	01000:
-                            //ADD
-	                          sub = 0;
-														add = 1;
-														beq = 0;
-                          end
-											//Fin del tercer mux
-                    111:
-                        //AND  
-                        and = 1;
-                        or = 0;
-                    110:
-                        //OR
-                        or = 1;
-                        and = 0;
-              end
-						//Fin del segundo MUX
+		//siguiente multiplexor concatenado 
+		begin 
+			case(sel_2)
+				000:
+					//Tercer Mux concatenado 
+					begin 
+						case(sel_3)
+							00000:begin
+							//SUB
+                          					sub = 1;
+								add = 0;
+								beq = 0;
+							end
+
+                        				01000:begin
+                            				//ADD
+	                          				sub = 0;
+								add = 1;	
+								beq = 0;
+							end
+                       			end
+					//Fin del tercer mux
+                    		111:
+                        	//AND  
+                        		and = 1;
+                        		or = 0;
+                   		 110:
+                        	//OR
+                       			 or = 1;
+                        		and = 0;
+             			 end
+				//Fin del segundo MUX
 
         11000:
-          beq = 1;
+          	beq = 1;
 
         default:
          	ld = 0;
-  				sd = 0;
-  				beq = 0;
-  				and = 0;
- 					or = 0;
-  				add = 0;
-  				sub = 0;
+  		sd = 0;
+  		beq = 0;
+  		and = 0;
+ 		or = 0;
+  		add = 0;
+  		sub = 0;
 
 end
-
 end
 endmodule
