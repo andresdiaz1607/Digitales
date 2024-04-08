@@ -1,0 +1,55 @@
+Command: vcs -Mupdate GeneradorImm_tb.sv -full64 -debug_acc+all+dmptf -debug_region+cell+encrypt \
+-sverilog -l log
+                         Chronologic VCS (TM)
+       Version R-2020.12-SP2_Full64 -- Sat Apr  6 22:06:09 2024
+
+                    Copyright (c) 1991 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+Parsing design file 'GeneradorImm_tb.sv'
+Parsing included file 'GeneradorImm.sv'.
+Back to file 'GeneradorImm_tb.sv'.
+Top Level Modules:
+       GeneradorImm_tb
+TimeScale is 1 ns / 1 ps
+
+Error-[IRIPS] Illegal range in part select
+GeneradorImm.sv, 11
+  The range of the part select is illegal:
+  Offset[30:20]
+
+
+Error-[IRIPS] Illegal range in part select
+GeneradorImm.sv, 13
+  The range of the part select is illegal:
+  Offset[30:25]
+
+
+Error-[IRIPS] Illegal range in part select
+GeneradorImm.sv, 13
+  The range of the part select is illegal:
+  Offset[11:7]
+
+
+Error-[IRIPS] Illegal range in part select
+GeneradorImm.sv, 15
+  The range of the part select is illegal:
+  Offset[30:25]
+
+
+Error-[IRIPS] Illegal range in part select
+GeneradorImm.sv, 15
+  The range of the part select is illegal:
+  Offset[11:8]
+
+
+Error-[IRIPS] Illegal range in part select
+GeneradorImm.sv, 6
+  The range of the part select is illegal:
+  Offset[6:4]
+
+6 errors
+CPU time: .301 seconds to compile

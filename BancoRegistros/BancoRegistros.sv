@@ -15,7 +15,7 @@ module BancoRegistros #(parameter N = 32, Bits = 64)
   genvar i;
   generate
     for(i=0; i < N; i = i + 1) begin: Registro_
-      RegistroFFD #(.Bits(Bits))(.data(data_wr), .enable(Enable[i]) , .clk(clk) ,.rst(rst), .q(D_out[i]));
+      RegistroFFD #(.Bits(Bits)) Registro (.data(data_wr), .enable(Enable[i]) , .clk(clk) ,.rst(rst), .q(D_out[i]));
     end
   endgenerate
   MuxParam #(.N(N), .Bits(Bits)) Mux_rd_1(.read_code(ptr_rd_1), .D(D_out), .Q(data_rd_1));

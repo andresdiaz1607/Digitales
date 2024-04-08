@@ -1,19 +1,19 @@
 `timescale 1ns/1ps
-module GeneradorImm (
-    input wire [31:0] Instruccion,
-    output reg [63:0] Inmediato
+module GeneradorImm #(Bits, Ancho)(
+    input wire [Ancho - 1:0] Offset,
+    output reg [Bits - 1:0] Inmediato
    );
-  wire [2:0] Selector = Instruccion[6:4];
-  parameter A = 3'b000, B = 3'b010, C = 3'b110, D = 3'b011;
+  wire [2:0] Selector = Offset[6:4];
+  parameter A = 3'b000, B = 3'b010, C = 3'b110; //A = load, B = save, C = BEQ
   always @(*) begin
     case(Selector) 
     A:
-      Inmediato = {{52{Instruccion[31]}},Instruccion[30:20]};
+      Inmediato = {{52{Offset[31]}},Offset[30:20]};
     B:
-      Inmediato = {{52{Instruccion[31]}},Instruccion[30:25],Instruccion[11:7]};
+      Inmediato = {{52{Offset[31]}},Offset[30:25],Offset[11:7]};
     C:
-      Inmediato = {{50{Instruccion[31]}},Instruccion[7],Instruccion[30:25],Instruccion[11:8],2'b00};
-    D:
+      Inmediato = 1<<{{50{Offset[31]}},Offset[7],Offset[30:25],Offset[11:8],1'b0};
+    default:
       Inmediato = 64'b0;
   endcase
   end

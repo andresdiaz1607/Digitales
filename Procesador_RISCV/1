@@ -1,0 +1,52 @@
+`timescale 1ns/1ps
+module ALU_Unit #(Bits) (
+  input wire [Bits-1:0] A,
+  input wire [Bits-1:0] B,
+  input wire [1:0] sel,
+  output reg zero,
+  output reg [Bits-1:0] resultado
+);
+  reg sub; //variable para la bandera de cero
+  reg bn; //variable para calcular la Resta con complemento a2
+  reg bj;
+  always@(*) begin
+      case(sel)
+        00:
+	  assign resultado = A + B; //Función de suma
+          assign zero = 0;
+        01: 
+	  begin
+            bn= (A<B)? A : B;
+            bj= (A<B)? B : A;
+            bn = ~bn +1;
+            sub = bj + bn;
+            if (sub == 64'd0) 
+	      begin
+	        assign zero = 1'b1;
+                assign resultado = 64'd0;
+              end
+	      else begin
+		assign resultado = sub;
+		zero = 0;
+	      end
+          end
+
+        10: 
+	  begin
+            assign resultado = A & B ; //Función AND
+            assign zero = 1'b0;
+          end
+        11: 
+          begin
+            assign resultado = A | B; //Función OR
+            assign zero = 0;
+          end
+        default: 
+	  begin
+            assign zero = 0;
+            assign resultado = 64'd0;
+          end
+    endcase
+  end
+endmodule
+
