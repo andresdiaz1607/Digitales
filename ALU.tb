@@ -18,9 +18,11 @@ module ALU_tb;
     .z(z),
     .q(q)
   );
-
+   
   // Estímulo
   initial begin
+ $dumpfile("ALU_ondas.vcd"); // Nombre del archivo VCD generado
+    $dumpvars(0, ALU_tb);   // Guardar las señales del módulo ALU_tb en el archivo VCD
     // Caso de prueba 1: Suma
     a = 8'h0A;
     b = 8'h05;
