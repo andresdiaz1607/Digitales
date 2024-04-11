@@ -7,11 +7,11 @@ module GeneradorImm_tb;
     initial begin
       $dumpfile("GeneradorImm.vcd");
       $dumpvars(0,DUT);
-      Instruccion = 32'b11000110001100010000001000000000;//imm = 12
+      Instruccion = 32'b00000000101000000010000010000011;//imm = 10
       #20
-      Instruccion = 32'b00000100100000000000010000100000; //imm = 24
+      Instruccion = 32'b00000000111100000010000100000011; //imm = 15
       #20
-      Instruccion = 32'b00000000000000000000100001100000; // imm = 8
+      Instruccion = 32'b00000000001100000010000100100011; // imm = 2
       #20
       Instruccion = 32'b00000010000000000000000000110000;
       #20

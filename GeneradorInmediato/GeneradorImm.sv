@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
-module GeneradorImm #(Bits, Ancho)(
-    input wire [Ancho - 1:0] Offset,
+module GeneradorImm #(Bits=64)(
+input wire [31:0] Offset,
     output reg [Bits - 1:0] Inmediato
    );
   wire [2:0] Selector = Offset[6:4];

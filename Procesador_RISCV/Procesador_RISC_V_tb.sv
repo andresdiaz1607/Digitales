@@ -21,7 +21,12 @@ module test_RISC_V #(Bits = 64, MemSize = 16, N = 32, NumInst = 6);
     end
   always 
     begin
-      #5 clk = ~clk; 
+     #5 clk = ~clk; 
     end
+    always @(posedge clk) begin 
+      prueba(); 
+    end 
+    task prueba();
+	 $monitor("El valor en el registro:")
 endmodule
 
