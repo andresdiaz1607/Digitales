@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module Data_Memory#(Bits, MemSize)(
+module Data_Memory#(Bits = 64, MemSize = 16)(
   input clk,
   input [Bits-1:0] mem_access_addr,// dirección de acceso, Compartido por read and write port
   input [Bits-1:0] mem_write_data,// Puerto de escritura

@@ -14,7 +14,7 @@ module GeneradorImm_tb;
       Instruccion = 32'b00000000001100000010000100100011; // imm = 2
       #20
       Instruccion = 32'b00000010000000000000000000110000;
-      #20
-  $finish;
+      #60
+      $finish;
   end
 endmodule
