@@ -4,6 +4,7 @@ module hotbit#(parameter N) (
   input wr_en,
   output reg Outn [N-1:0]
   );
+  
   genvar i;
   generate
     for(i=1; i < N; i = i + 1) begin

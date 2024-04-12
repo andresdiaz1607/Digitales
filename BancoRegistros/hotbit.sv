@@ -6,7 +6,7 @@ module hotbit#(parameter N = 32) (
   );
   genvar i;
   generate
-    for(i=0; i < N; i = i + 1) begin
+    for(i=1; i < N; i = i + 1) begin
       localparam localsel = i;
       assign Outn[i] = (localsel == reg_wr_cod && wr_en == 1) ? 1:0;
      end

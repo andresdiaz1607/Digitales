@@ -1,5 +1,5 @@
 $date
-	Mon Apr  8 20:05:07 2024
+	Thu Apr 11 15:34:51 2024
 $end
 
 $version
@@ -10,7 +10,7 @@ $timescale
 	1ps
 $end
 
-$comment Csum: 1 be7cb7375f5b56a7 $end
+$comment Csum: 1 e03bbf56e369c21f $end
 
 
 $scope module BancoRegistros_tb $end
@@ -54,7 +54,7 @@ $upscope $end
 $upscope $end
 
 
-$scope module Registro_[0].Registro $end
+$scope module Registro_[1].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -63,7 +63,7 @@ $var reg 64 - q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[1].Registro $end
+$scope module Registro_[2].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -72,7 +72,7 @@ $var reg 64 / q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[2].Registro $end
+$scope module Registro_[3].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -81,7 +81,7 @@ $var reg 64 1 q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[3].Registro $end
+$scope module Registro_[4].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -90,7 +90,7 @@ $var reg 64 3 q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[4].Registro $end
+$scope module Registro_[5].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -99,7 +99,7 @@ $var reg 64 5 q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[5].Registro $end
+$scope module Registro_[6].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -108,7 +108,7 @@ $var reg 64 7 q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[6].Registro $end
+$scope module Registro_[7].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -117,7 +117,7 @@ $var reg 64 9 q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[7].Registro $end
+$scope module Registro_[8].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -126,7 +126,7 @@ $var reg 64 ; q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[8].Registro $end
+$scope module Registro_[9].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -135,7 +135,7 @@ $var reg 64 = q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[9].Registro $end
+$scope module Registro_[10].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -144,7 +144,7 @@ $var reg 64 ? q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[10].Registro $end
+$scope module Registro_[11].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -153,7 +153,7 @@ $var reg 64 A q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[11].Registro $end
+$scope module Registro_[12].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -162,7 +162,7 @@ $var reg 64 C q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[12].Registro $end
+$scope module Registro_[13].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -171,7 +171,7 @@ $var reg 64 E q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[13].Registro $end
+$scope module Registro_[14].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -180,7 +180,7 @@ $var reg 64 G q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[14].Registro $end
+$scope module Registro_[15].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -189,7 +189,7 @@ $var reg 64 I q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[15].Registro $end
+$scope module Registro_[16].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -198,7 +198,7 @@ $var reg 64 K q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[16].Registro $end
+$scope module Registro_[17].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -207,7 +207,7 @@ $var reg 64 M q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[17].Registro $end
+$scope module Registro_[18].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -216,7 +216,7 @@ $var reg 64 O q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[18].Registro $end
+$scope module Registro_[19].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -225,7 +225,7 @@ $var reg 64 Q q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[19].Registro $end
+$scope module Registro_[20].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -234,7 +234,7 @@ $var reg 64 S q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[20].Registro $end
+$scope module Registro_[21].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -243,7 +243,7 @@ $var reg 64 U q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[21].Registro $end
+$scope module Registro_[22].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -252,7 +252,7 @@ $var reg 64 W q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[22].Registro $end
+$scope module Registro_[23].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -261,7 +261,7 @@ $var reg 64 Y q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[23].Registro $end
+$scope module Registro_[24].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -270,7 +270,7 @@ $var reg 64 [ q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[24].Registro $end
+$scope module Registro_[25].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -279,7 +279,7 @@ $var reg 64 ] q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[25].Registro $end
+$scope module Registro_[26].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -288,7 +288,7 @@ $var reg 64 _ q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[26].Registro $end
+$scope module Registro_[27].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -297,7 +297,7 @@ $var reg 64 a q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[27].Registro $end
+$scope module Registro_[28].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -306,7 +306,7 @@ $var reg 64 c q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[28].Registro $end
+$scope module Registro_[29].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -315,7 +315,7 @@ $var reg 64 e q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[29].Registro $end
+$scope module Registro_[30].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
@@ -324,21 +324,12 @@ $var reg 64 g q [63:0] $end
 $upscope $end
 
 
-$scope module Registro_[30].Registro $end
+$scope module Registro_[31].Registro $end
 $var wire 64 $ data [63:0] $end
 $var wire 1 ' clk $end
 $var wire 1 & rst $end
 $var wire 1 h enable $end
 $var reg 64 i q [63:0] $end
-$upscope $end
-
-
-$scope module Registro_[31].Registro $end
-$var wire 64 $ data [63:0] $end
-$var wire 1 ' clk $end
-$var wire 1 & rst $end
-$var wire 1 j enable $end
-$var reg 64 k q [63:0] $end
 $upscope $end
 
 $upscope $end
@@ -349,6 +340,7 @@ $enddefinitions $end
 
 #0
 $dumpvars
+b0000000000000000000000000000000000000000000000000000000000000000 ?
 b0000000000000000000000000000000000000000000000000000000000000000 A
 b0000000000000000000000000000000000000000000000000000000000000000 C
 b0000000000000000000000000000000000000000000000000000000000000000 E
@@ -359,7 +351,6 @@ b0000000000000000000000000000000000000000000000000000000000000000 M
 b0000000000000000000000000000000000000000000000000000000000000000 O
 b0000000000000000000000000000000000000000000000000000000000000000 Q
 b0000000000000000000000000000000000000000000000000000000000000000 S
-b0000000000000000000000000000000000000000000000000000000000000000 /
 b0000000000000000000000000000000000000000000000000000000000000000 U
 b0000000000000000000000000000000000000000000000000000000000000000 W
 b0000000000000000000000000000000000000000000000000000000000000000 Y
@@ -369,17 +360,16 @@ b0000000000000000000000000000000000000000000000000000000000000000 _
 b0000000000000000000000000000000000000000000000000000000000000000 a
 b0000000000000000000000000000000000000000000000000000000000000000 c
 b0000000000000000000000000000000000000000000000000000000000000000 e
+b0000000000000000000000000000000000000000000000000000000000000000 /
 b0000000000000000000000000000000000000000000000000000000000000000 g
-b0000000000000000000000000000000000000000000000000000000000000000 1
 b0000000000000000000000000000000000000000000000000000000000000000 i
-b0000000000000000000000000000000000000000000000000000000000000000 k
+b0000000000000000000000000000000000000000000000000000000000000000 1
 b0000000000000000000000000000000000000000000000000000000000000000 3
 b0000000000000000000000000000000000000000000000000000000000000000 5
 b0000000000000000000000000000000000000000000000000000000000000000 7
 b0000000000000000000000000000000000000000000000000000000000000000 9
 b0000000000000000000000000000000000000000000000000000000000000000 ;
 b0000000000000000000000000000000000000000000000000000000000000000 =
-b0000000000000000000000000000000000000000000000000000000000000000 ?
 b0000000000000000000000000000000000000000000000000000000000000000 (
 b0000000000000000000000000000000000000000000000000000000000000000 )
 b0000000000000000000000000000000000000000000000000000000000000000 -
@@ -423,7 +413,6 @@ b0000000000000000000000000000000000000000000000000000000000000000 +
 0d
 0f
 0h
-0j
 $end
 #10000
 1'
@@ -431,63 +420,61 @@ $end
 0&
 1%
 0'
-1,
 #30000
 1'
 #40000
 b00001 #
 b0000000000000000000000000000000000000000000000000000000000001010 $
 0'
-1.
-0,
+1,
 #50000
 1'
-b0000000000000000000000000000000000000000000000000000000000001010 /
+b0000000000000000000000000000000000000000000000000000000000001010 -
 #60000
 b00010 #
 b0000000000000000000000000000000000000000000000000000000000010100 $
 0'
-10
-0.
+1.
+0,
 #70000
 1'
-b0000000000000000000000000000000000000000000000000000000000010100 1
+b0000000000000000000000000000000000000000000000000000000000010100 /
 #80000
 b00011 #
 b0000000000000000000000000000000000000000000000000000000000011110 $
 0'
-12
-00
+10
+0.
 #90000
 1'
-b0000000000000000000000000000000000000000000000000000000000011110 3
+b0000000000000000000000000000000000000000000000000000000000011110 1
 #100000
 b00100 #
 b0000000000000000000000000000000000000000000000000000000000101000 $
 0'
-14
-02
+12
+00
 #110000
 1'
-b0000000000000000000000000000000000000000000000000000000000101000 5
+b0000000000000000000000000000000000000000000000000000000000101000 3
 #120000
 b00101 #
 b0000000000000000000000000000000000000000000000000000000000110010 $
 0'
-16
-04
+14
+02
 #130000
 1'
-b0000000000000000000000000000000000000000000000000000000000110010 7
+b0000000000000000000000000000000000000000000000000000000000110010 5
 #140000
 b00110 #
 b0000000000000000000000000000000000000000000000000000000000111100 $
 0'
-18
-06
+16
+04
 #150000
 1'
-b0000000000000000000000000000000000000000000000000000000000111100 9
+b0000000000000000000000000000000000000000000000000000000000111100 7
 #160000
 b00001 !
 b00010 "
@@ -505,7 +492,7 @@ b00100 "
 b0000000000000000000000000000000000000000000000000000000000000001 $
 b00001 #
 0'
-08
+06
 b0000000000000000000000000000000000000000000000000000000000011110 *
 b0000000000000000000000000000000000000000000000000000000000011110 (
 b0000000000000000000000000000000000000000000000000000000000101000 +

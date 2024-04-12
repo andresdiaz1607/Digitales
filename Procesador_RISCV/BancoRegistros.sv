@@ -9,11 +9,11 @@ module BancoRegistros #(parameter N, Bits)
   input wr_en, //Habilitador de escritura
   input rst, clk,
   output reg [Bits-1:0] data_rd_1, data_rd_2 //Info de rs1 y rs2
-);  
+);
   wire Enable [N-1:0];
   wire [Bits-1:0] D_out [N-1:0] ;
   hotbit #(.N(N)) Habilitador_escritura (.wr_en(wr_en), .reg_wr_cod(ptr_wr), .Outn(Enable));
-  D_out[0] = 64'b0;
+  assign D_out[0] = 64'b0;
   genvar i;
   generate
     for(i=1; i < N; i = i + 1) begin: Registro_

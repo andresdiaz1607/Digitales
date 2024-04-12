@@ -7,8 +7,7 @@ module Datapath_Unit#(Bits, MemSize, N, NumInst)(
   input clk, rst,
   input beq,mem_read,mem_write,alu_src,mem_to_reg,reg_write,
   input[1:0] alu_op,
-  output[2:0] Opcode,
-  output z
+  output[2:0] Opcode
   );
   reg [31:0] pc_current;
   wire [31:0] pc_next,pc2;
@@ -82,14 +81,13 @@ module Datapath_Unit#(Bits, MemSize, N, NumInst)(
      .resultado(ALU_out), 
      .zero(zero_flag));
     
-    assign z = zero_flag;
     //Lógica de program counter de beq o siguiente inst
     assign PC_beq = pc2 + im_ext;
     assign beq_control = beq & zero_flag;
     assign pc_next = (beq_control==1'b1) ? PC_beq : pc2;
 
-  //Banco de memoria de informacióni
-  Data_Memory #(
+    //Banco de memoria de informacióni
+    Data_Memory #(
       .Bits(Bits), 
       .MemSize(MemSize)) 
      Memoria_Informacion (

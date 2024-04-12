@@ -1,6 +1,6 @@
 `include "Onehot.sv"
 `timescale 1ns/1ps
-module MuxParam #(parameter N, Bits) 
+module MuxParam #(parameter N = 32, Bits = 64) 
 (
   input [$clog2(N)-1:0] read_code,
   input [Bits-1:0] D [N-1:0],

@@ -12,9 +12,10 @@ module BancoRegistros #(parameter N = 32, Bits = 64)
   wire Enable [N-1:0];
   wire [Bits-1:0] D_out [N-1:0] ;
   hotbit #(.N(N)) Habilitador_escritura (.wr_en(wr_en), .reg_wr_cod(ptr_wr), .Outn(Enable));
+  assign D_out[0] = 64'b0;
   genvar i;
   generate
-    for(i=0; i < N; i = i + 1) begin: Registro_
+    for(i=1; i < N; i = i + 1) begin: Registro_
       RegistroFFD #(.Bits(Bits)) Registro (.data(data_wr), .enable(Enable[i]) , .clk(clk) ,.rst(rst), .q(D_out[i]));
     end
   endgenerate

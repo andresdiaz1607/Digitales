@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps 
 `include "Procesador_RISC_V.sv"
-module test_RISC_V #(Bits = 64, MemSize = 16, N = 32, NumInst = 6); 
+module test_RISC_V #(Bits = 64, MemSize = 16, N = 32, NumInst = 7); 
   // Inputs
   reg clk, rst; 
   // Creación de una instancia de la unidad bajo prueba (UUT)
@@ -8,25 +8,17 @@ module test_RISC_V #(Bits = 64, MemSize = 16, N = 32, NumInst = 6);
   (.clk(clk), .rst(rst)); 
   initial 
     begin
-      clk = 0;
+      clk <= 0;
       $dumpfile("RISCV.vcd");
       $dumpvars(5,uut);
+      rst = 1;
+      #5
       rst = 0;
-      #10
-      rst = 1'b1;
-      #10
-      rst = 1'b0;
-      #200
+      #80;
       $finish; 
-    end
+  end
   always 
     begin
-     #5 clk = ~clk; 
-    end
-    always @(posedge clk) begin 
-      prueba(); 
-    end 
-    task prueba();
-	 $monitor("El valor en el registro:")
+      #5 clk = ~clk; 
+  end
 endmodule
-

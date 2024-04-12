@@ -1,7 +1,6 @@
 `timescale 1ns / 1ps 
 module Control_Unit(
   input[2:0] Opcode,
-  input z,
   output reg [1:0] alu_op,
   output reg beq,mem_read,mem_write,alu_src,mem_to_reg,reg_write);
   always @(*)
