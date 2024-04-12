@@ -8,10 +8,10 @@ module ALU_Unit #(Bits) (
 );
  always @(*) begin
     case(sel)
-	 3'b00: resultado = A + B; // add
-         3'b01: resultado = A - B; // sub
-         3'b10: resultado = A & B; // and
-	 3'b11: resultado = A | B; // or
+	 2'b00: resultado = A + B; // add
+         2'b01: resultado = A - B; // sub
+         2'b10: resultado = A & B; // and
+	 2'b11: resultado = A | B; // or
 	 default: resultado = A + B;
    endcase
  end
