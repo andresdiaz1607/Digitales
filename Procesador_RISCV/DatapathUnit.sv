@@ -9,9 +9,9 @@ module Datapath_Unit#(Bits, MemSize, N, NumInst)(
   input[1:0] alu_op,
   output[2:0] Opcode
   );
-  reg [31:0] pc_current;
-  wire [31:0] pc_next,pc2;
-  wire [31:0] offset;
+  reg [31:0] pc_current;//Program Counter
+  wire [31:0] pc_next,pc2; 
+  wire [31:0] offset; // Instrucción para generador de inmediato
   wire [2:0] cod_ins;
   wire [$clog2(N)-1:0] reg_write_dest;
   wire [Bits-1:0] reg_write_data;
@@ -19,11 +19,11 @@ module Datapath_Unit#(Bits, MemSize, N, NumInst)(
   wire [Bits-1:0] reg_read_data_1;
   wire [$clog2(N)-1:0] reg_read_addr_2;
   wire [Bits-1:0] reg_read_data_2;
-  wire [Bits-1:0] im_ext,read_data2;
-  wire [Bits-1:0] ALU_out;
-  wire zero_flag;
-  wire beq_control;
-  wire [31:0] PC_beq;
+  wire [Bits-1:0] im_ext,read_data2; //buses de salida del generador de inmediato y salida del mux entre inmediato o valor de registro 2
+  wire [Bits-1:0] ALU_out; //Salida de la ALU
+  wire zero_flag; //Bandera de zero
+  wire beq_control; //Control del branch; selector en mux de si dejar pasar al pc el resultado del program counter para branch o el de la siguiente dirección
+  wire [31:0] PC_beq; // 
   wire [Bits-1:0] mem_read_data;
   //PC
   initial begin
