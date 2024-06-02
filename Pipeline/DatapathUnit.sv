@@ -52,7 +52,6 @@ module Datapath_Unit#(Bits, MemSize, N, NumInst)(
   reg [31:0] IF_ID_Instruction;
 
   //ID/EX registros
-  reg [31:0] ID_EX_pc;
   reg [$clog2(N)-1:0] ID_EX_Rs1;
   reg [$clog2(N)-1:0] ID_EX_Rs2;
   reg [Bits-1:0] ID_EX_ReadData1;
@@ -61,7 +60,6 @@ module Datapath_Unit#(Bits, MemSize, N, NumInst)(
   reg [Bits-1:0] ID_EX_Inmediato;
 
   //EX/MEM registros
-  reg [31:0] EX_MEM_newpc;
   reg EX_MEM_zero;
   reg [Bits-1:0] EX_MEM_ALUresult;
   reg [$clog2(N)-1:0] EX_MEM_Rd;

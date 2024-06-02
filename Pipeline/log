@@ -1,7 +1,7 @@
 Command: vcs -Mupdate Procesador_RISC_V_tb.sv -full64 -debug_acc+all+dmptf -debug_region+cell+encrypt \
 -sverilog -l log
                          Chronologic VCS (TM)
-       Version R-2020.12-SP2_Full64 -- Sun Jun  2 11:49:32 2024
+       Version R-2020.12-SP2_Full64 -- Sun Jun  2 15:41:05 2024
 
                     Copyright (c) 1991 - 2021 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -15,8 +15,6 @@ Parsing included file 'ControlUnit.sv'.
 Back to file 'Procesador_RISC_V.sv'.
 Parsing included file 'DatapathUnit.sv'.
 Parsing included file 'InstructionMemory.sv'.
-Parsing included file 'MemoriaRAM.sv'.
-Back to file 'InstructionMemory.sv'.
 Back to file 'DatapathUnit.sv'.
 Parsing included file 'Decodificador_Instrucciones.sv'.
 Back to file 'DatapathUnit.sv'.
@@ -31,57 +29,6 @@ Parsing included file 'RegistroFFD.sv'.
 Back to file 'BancoRegistros.sv'.
 Back to file 'DatapathUnit.sv'.
 Parsing included file 'DataMemory.sv'.
-Parsing included file 'MemoriaRAM.sv'.
-
-Warning-[WUPD] UDP previously declared
-  UDP is previously declared: 
-   "MemoriaRAM.sv", 77: token is 'XSPRAMLP_2048X32_M8P_DFF'
-  primitive XSPRAMLP_2048X32_M8P_DFF  (Q, D, C, RN, SN, NOTIFY);
-                                    ^
-  Current declaration will be ignored.
-
-
-Error-[MPD] Module previously declared
-  The module was previously declared at: 
-  "MemoriaRAM.sv", 143
-  It is redeclared later at:
-  "MemoriaRAM.sv", 143: token is 'XSPRAMLP_2048X32_M8P_tmax'
-  module XSPRAMLP_2048X32_M8P_tmax (QI, D, A, CLK, possRead, cleanWrite, 
-  Q_OK);
-                                  ^
-  Please remove one of the declarations and compile again.
-
-
-Error-[MPD] Module previously declared
-  The module was previously declared at: 
-  "MemoriaRAM.sv", 210
-  It is redeclared later at:
-  "MemoriaRAM.sv", 210: token is 'XSPRAMLP_2048X32_M8P_RDY'
-  module XSPRAMLP_2048X32_M8P_RDY (CLK, RX, RY, WEn);
-                                 ^
-  Please remove one of the declarations and compile again.
-
-
-Error-[MPD] Module previously declared
-  The module was previously declared at: 
-  "MemoriaRAM.sv", 246
-  It is redeclared later at:
-  "MemoriaRAM.sv", 246: token is 'XSPRAMLP_2048X32_M8P_RDYC'
-  module XSPRAMLP_2048X32_M8P_RDYC (CLK, CLKD, CLKDZ);
-                                  ^
-  Please remove one of the declarations and compile again.
-
-
-Error-[MPD] Module previously declared
-  The module was previously declared at: 
-  "MemoriaRAM.sv", 259
-  It is redeclared later at:
-  "MemoriaRAM.sv", 259: token is 'XSPRAMLP_2048X32_M8P'
-  module XSPRAMLP_2048X32_M8P (Q, D, A, CLK, CEn, WEn, SL, RDY);
-                             ^
-  Please remove one of the declarations and compile again.
-
-Back to file 'DataMemory.sv'.
 Back to file 'DatapathUnit.sv'.
 Parsing included file 'GeneradorImm.sv'.
 Back to file 'DatapathUnit.sv'.
@@ -95,6 +42,27 @@ Parsing included file 'HazardUnit.sv'.
 Back to file 'DatapathUnit.sv'.
 Back to file 'Procesador_RISC_V.sv'.
 Back to file 'Procesador_RISC_V_tb.sv'.
-1 warning
-4 errors
-CPU time: .255 seconds to compile
+Top Level Modules:
+       test_RISC_V
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+
+4 modules and 0 UDP read.
+recompiling module Procesador_RISC_V
+	However, due to incremental compilation, only 1 module needs to be compiled. 
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -shared  -Bsymbolic --no-relax  -o .//../simv.daidir//_cuarc0.so objs/amcQw_d.o \
+
+rm -f _cuarc0.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/mnt/vol_NFS_rh003/tools/vcs/R-2020.12-SP2/linux64/lib -L/mnt/vol_NFS_rh003/tools/vcs/R-2020.12-SP2/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1     _1550084_archive_1.so _prev_archive_1.so \
+_cuarc0.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o \
+rmar_llvm_0_0.o           -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile \
+-luclinative /mnt/vol_NFS_rh003/tools/vcs/R-2020.12-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive \
+-lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /mnt/vol_NFS_rh003/tools/vcs/R-2020.12-SP2/linux64/lib/vcs_save_restore_new.o \
+/mnt/vol_NFS_rh003/tools/verdi/R-2020.12-SP2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc \
+-lm -lpthread -ldl 
+../simv up to date
+CPU time: .738 seconds to compile + .490 seconds to elab + .489 seconds to link

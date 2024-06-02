@@ -1,4 +1,3 @@
-`include "MemoriaRAM.sv" 
 `timescale 1ns/1ps
 module InstructionMemory#(
     parameter NumInst
