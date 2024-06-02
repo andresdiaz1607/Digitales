@@ -1,0 +1,38 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        1
+    ],
+    "MuxParam_0000": [
+        "MuxParam_0000",
+        "G8BQV",
+        "module",
+        5
+    ],
+    "hotbit_0000": [
+        "hotbit_0000",
+        "Yfz3H",
+        "module",
+        4
+    ],
+    "Procesador_RISC_V": [
+        "Procesador_RISC_V",
+        "Cp3SF",
+        "module",
+        3
+    ],
+    "test_RISC_V": [
+        "test_RISC_V",
+        "KYJ9x",
+        "module",
+        2
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        6
+    ]
+}

@@ -1,0 +1,54 @@
+$date
+	Sat Jun  1 21:04:27 2024
+$end
+
+$version
+	Synopsys VCS version R-2020.12-SP2_Full64
+$end
+
+$timescale
+	1s
+$end
+
+$comment Csum: 1 5688a804a5d8f4f7 $end
+
+
+$scope module Forwarding_Unit_2_tb $end
+
+$scope module uut $end
+$var wire 1 ! EX_MEM_MemWrite $end
+$var wire 1 " MEM_WB_RegWrite $end
+$var wire 5 # ID_EX_Rs1 [4:0] $end
+$var wire 5 $ ID_EX_Rs2 [4:0] $end
+$var wire 5 % EX_MEM_Rd [4:0] $end
+$var reg 1 & Sel_A $end
+$var reg 1 ' Sel_B $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+
+#0
+$dumpvars
+1&
+0'
+1!
+1"
+b00001 #
+b00000 $
+b00001 %
+$end
+#10
+b00000 #
+b00001 $
+0&
+1'
+#20
+0"
+b00001 #
+b00000 $
+0'
+#30
+0!
+1"

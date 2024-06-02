@@ -1,0 +1,100 @@
+Command: vcs -Mupdate Procesador_RISC_V_tb.sv -full64 -debug_acc+all+dmptf -debug_region+cell+encrypt \
+-sverilog -l log
+                         Chronologic VCS (TM)
+       Version R-2020.12-SP2_Full64 -- Sun Jun  2 11:49:32 2024
+
+                    Copyright (c) 1991 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+Parsing design file 'Procesador_RISC_V_tb.sv'
+Parsing included file 'Procesador_RISC_V.sv'.
+Parsing included file 'ControlUnit.sv'.
+Back to file 'Procesador_RISC_V.sv'.
+Parsing included file 'DatapathUnit.sv'.
+Parsing included file 'InstructionMemory.sv'.
+Parsing included file 'MemoriaRAM.sv'.
+Back to file 'InstructionMemory.sv'.
+Back to file 'DatapathUnit.sv'.
+Parsing included file 'Decodificador_Instrucciones.sv'.
+Back to file 'DatapathUnit.sv'.
+Parsing included file 'BancoRegistros.sv'.
+Parsing included file 'MuxParam.sv'.
+Parsing included file 'Onehot.sv'.
+Back to file 'MuxParam.sv'.
+Back to file 'BancoRegistros.sv'.
+Parsing included file 'hotbit.sv'.
+Back to file 'BancoRegistros.sv'.
+Parsing included file 'RegistroFFD.sv'.
+Back to file 'BancoRegistros.sv'.
+Back to file 'DatapathUnit.sv'.
+Parsing included file 'DataMemory.sv'.
+Parsing included file 'MemoriaRAM.sv'.
+
+Warning-[WUPD] UDP previously declared
+  UDP is previously declared: 
+   "MemoriaRAM.sv", 77: token is 'XSPRAMLP_2048X32_M8P_DFF'
+  primitive XSPRAMLP_2048X32_M8P_DFF  (Q, D, C, RN, SN, NOTIFY);
+                                    ^
+  Current declaration will be ignored.
+
+
+Error-[MPD] Module previously declared
+  The module was previously declared at: 
+  "MemoriaRAM.sv", 143
+  It is redeclared later at:
+  "MemoriaRAM.sv", 143: token is 'XSPRAMLP_2048X32_M8P_tmax'
+  module XSPRAMLP_2048X32_M8P_tmax (QI, D, A, CLK, possRead, cleanWrite, 
+  Q_OK);
+                                  ^
+  Please remove one of the declarations and compile again.
+
+
+Error-[MPD] Module previously declared
+  The module was previously declared at: 
+  "MemoriaRAM.sv", 210
+  It is redeclared later at:
+  "MemoriaRAM.sv", 210: token is 'XSPRAMLP_2048X32_M8P_RDY'
+  module XSPRAMLP_2048X32_M8P_RDY (CLK, RX, RY, WEn);
+                                 ^
+  Please remove one of the declarations and compile again.
+
+
+Error-[MPD] Module previously declared
+  The module was previously declared at: 
+  "MemoriaRAM.sv", 246
+  It is redeclared later at:
+  "MemoriaRAM.sv", 246: token is 'XSPRAMLP_2048X32_M8P_RDYC'
+  module XSPRAMLP_2048X32_M8P_RDYC (CLK, CLKD, CLKDZ);
+                                  ^
+  Please remove one of the declarations and compile again.
+
+
+Error-[MPD] Module previously declared
+  The module was previously declared at: 
+  "MemoriaRAM.sv", 259
+  It is redeclared later at:
+  "MemoriaRAM.sv", 259: token is 'XSPRAMLP_2048X32_M8P'
+  module XSPRAMLP_2048X32_M8P (Q, D, A, CLK, CEn, WEn, SL, RDY);
+                             ^
+  Please remove one of the declarations and compile again.
+
+Back to file 'DataMemory.sv'.
+Back to file 'DatapathUnit.sv'.
+Parsing included file 'GeneradorImm.sv'.
+Back to file 'DatapathUnit.sv'.
+Parsing included file 'ALU_Unit.sv'.
+Back to file 'DatapathUnit.sv'.
+Parsing included file 'Fowarding_Unit.sv'.
+Back to file 'DatapathUnit.sv'.
+Parsing included file 'Fowarding_Unit_2.sv'.
+Back to file 'DatapathUnit.sv'.
+Parsing included file 'HazardUnit.sv'.
+Back to file 'DatapathUnit.sv'.
+Back to file 'Procesador_RISC_V.sv'.
+Back to file 'Procesador_RISC_V_tb.sv'.
+1 warning
+4 errors
+CPU time: .255 seconds to compile
