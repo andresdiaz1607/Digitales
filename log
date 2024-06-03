@@ -1,0 +1,8 @@
+Command: vcs -Mupdate Procesador_RISC_V_tb.sv -full64 -debug_acc+all+dmptf -debug_region+cell+encrypt \
+-sverilog -l log
+
+Error-[FILE_CANT_FIND_ERR] File not found
+  File "Procesador_RISC_V_tb.sv" does not exist or read permission denied
+  Make sure the file "Procesador_RISC_V_tb.sv" exists and has read 
+  permissions.
+

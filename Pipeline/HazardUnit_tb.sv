@@ -5,7 +5,7 @@ module tb_HazardDetectionUnit;
     reg [4:0] IF_ID_RegisterRs2;
     reg [4:0] ID_EX_RegisterRd;
     reg ID_EX_MemRead;
-    reg zero;
+    reg zero,beq;
     wire PCWrite;
     wire IF_ID_Write;
     wire ControlMuxSel;
@@ -18,6 +18,7 @@ module tb_HazardDetectionUnit;
         .ID_EX_RegisterRd(ID_EX_RegisterRd),
         .ID_EX_MemRead(ID_EX_MemRead),
         .zero(zero),
+	.beq(beq),
         .IF_Flush(IF_Flush),
 	.PCWrite(PCWrite),
         .IF_ID_Write(IF_ID_Write),
@@ -26,6 +27,7 @@ module tb_HazardDetectionUnit;
 
     initial begin
 	zero = 1'b0;
+	beq = 1'b0;
 	$dumpfile("HazardUnit.vcd");
       	$dumpvars(0,DUT);
         // Test case 1: No hazard
@@ -35,8 +37,10 @@ module tb_HazardDetectionUnit;
         ID_EX_MemRead = 1'b0;
         #10;
 	zero = 1'b1;
+	beq = 1'b1;
 	#10
 	zero = 1'b0;
+	beq = 1'b0;
         // Test case 2: Load-use hazard detected
         IF_ID_RegisterRs1 = 5'd1;
         IF_ID_RegisterRs2 = 5'd2;
@@ -45,6 +49,7 @@ module tb_HazardDetectionUnit;
         #10;
 	
 	zero = 1'b0;
+	beq = 1'b0;
 	#10
 
         // Test case 3: No hazard
@@ -55,6 +60,7 @@ module tb_HazardDetectionUnit;
         #10
         
 	zero = 1'b1;
+	beq = 1'b1;
         #100
 
         $finish;

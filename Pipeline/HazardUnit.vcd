@@ -1,5 +1,5 @@
 $date
-	Mon Jun  3 07:26:46 2024
+	Mon Jun  3 08:02:26 2024
 $end
 
 $version
@@ -21,10 +21,11 @@ $var wire 5 " IF_ID_RegisterRs2 [4:0] $end
 $var wire 5 # ID_EX_RegisterRd [4:0] $end
 $var wire 1 $ ID_EX_MemRead $end
 $var wire 1 % zero $end
-$var reg 1 & IF_Flush $end
-$var reg 1 ' PCWrite $end
-$var reg 1 ( IF_ID_Write $end
-$var reg 1 ) ControlMuxSel $end
+$var wire 1 & beq $end
+$var reg 1 ' IF_Flush $end
+$var reg 1 ( PCWrite $end
+$var reg 1 ) IF_ID_Write $end
+$var reg 1 * ControlMuxSel $end
 $upscope $end
 
 $upscope $end
@@ -33,38 +34,42 @@ $enddefinitions $end
 
 #0
 $dumpvars
-0)
-0&
+0*
+0'
+1)
 1(
-1'
 b00001 !
 b00010 "
 b00011 #
 0$
 0%
+0&
 $end
 #10
 1%
 1&
-1)
+1'
+1*
+0)
 0(
-0'
 #20
 0%
+0&
 b00001 #
 1$
-0&
+0'
 #40
 b00110 !
 b00101 "
 b00110 #
 0$
-0)
+0*
+1)
 1(
-1'
 #50
 1%
 1&
-1)
+1'
+1*
+0)
 0(
-0'

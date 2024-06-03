@@ -151,7 +151,7 @@ module Datapath_Unit#(Bits, MemSize, N, NumInst)(
        .Inmediato(im_ext));
 
     //Hazard Detection Unit
-    HazardDetectionUnit Unidad_de_riesgo (.IF_ID_RegisterRs1(reg_read_addr_1), .IF_ID_RegisterRs2(reg_read_addr_2), .ID_EX_RegisterRd(ID_EX_Rd), .ID_EX_MemRead(Ex_MemRead), .PCWrite(PCWrite), .IF_ID_Write(IF_ID_Write), .ControlMuxSel(ControlMuxSel), .IF_Flush(IF_Flush), .zero(zero_flag));
+    HazardDetectionUnit Unidad_de_riesgo (.IF_ID_RegisterRs1(reg_read_addr_1), .IF_ID_RegisterRs2(reg_read_addr_2), .ID_EX_RegisterRd(ID_EX_Rd), .ID_EX_MemRead(Ex_MemRead), .PCWrite(PCWrite), .IF_ID_Write(IF_ID_Write), .ControlMuxSel(ControlMuxSel), .IF_Flush(IF_Flush), .beq(Ex_Branch) ,.zero(zero_flag));
 
     //Mux de señales de control para meter stalls
     always_comb begin
