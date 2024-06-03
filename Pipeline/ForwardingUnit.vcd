@@ -1,0 +1,80 @@
+$date
+	Mon Jun  3 06:58:30 2024
+$end
+
+$version
+	Synopsys VCS version R-2020.12-SP2_Full64
+$end
+
+$timescale
+	1s
+$end
+
+$comment Csum: 1 73ab0a5a1222dc76 $end
+
+
+$scope module forwarding_unit_tb $end
+
+$scope module uut $end
+$var wire 5 ! id_ex_rs1 [4:0] $end
+$var wire 5 " id_ex_rs2 [4:0] $end
+$var wire 5 # ex_mem_rd [4:0] $end
+$var wire 5 $ mem_wb_rd [4:0] $end
+$var wire 1 % ex_mem_regwrite $end
+$var wire 1 & mem_wb_regwrite $end
+$var reg 2 ' forward_a [1:0] $end
+$var reg 2 ( forward_b [1:0] $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+
+#0
+$dumpvars
+b00 '
+b00 (
+b00001 !
+b00010 "
+b00011 #
+b00100 $
+0%
+0&
+$end
+#10
+b00001 #
+1%
+b10 '
+#20
+b00011 #
+b00001 $
+0%
+1&
+b01 '
+#30
+b00010 #
+b00100 $
+1%
+0&
+b10 (
+b00 '
+#40
+b00011 #
+b00010 $
+0%
+1&
+b01 (
+#50
+b00000 !
+b00000 "
+b00000 #
+b00000 $
+1%
+b00 (
+#60
+b00001 !
+b00010 "
+b00001 #
+b00010 $
+b01 (
+b10 '

@@ -20,18 +20,20 @@ module HazardDetectionUnit(
 	  IF_Flush = 1'b0;
         end
 	
-	else if(zero) begin
-          PCWrite = 1'b1;
-          IF_ID_Write = 1'b1;
-          ControlMuxSel = 1'b1;
-          IF_Flush = 1'b1;
-        end
-        // Default control signals
+	// Default control signals
 	else begin
           PCWrite = 1'b1;
           IF_ID_Write = 1'b1;
           ControlMuxSel = 1'b0;
 	  IF_Flush = 1'b0;
 	end
+
+	if(zero) begin
+          PCWrite = 1'b0;
+          IF_ID_Write = 1'b0;
+          ControlMuxSel = 1'b1;
+          IF_Flush = 1'b1;
+        end
+
    end
 endmodule

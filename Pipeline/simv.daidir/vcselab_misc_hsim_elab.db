@@ -1,6 +1,6 @@
 psSimBaseName                      	simv
 psLogFileName                      	log
-pDaiDir                            	/mnt/vol_NFS_rh003/Est_Digitales_I_2024/BARRANTES_PEREZ_I_2024_dig/DiseñoDigitales/Pipeline/simv.daidir
+pDaiDir                            	/mnt/vol_NFS_rh003/Est_Digitales_I_2024/BARRANTES_PEREZ_I_2024_dig/Digitales/Pipeline/simv.daidir
 destPath                           	csrc/
 fSharedMaster                      	0
 fHsimPCSharedLibSpecified          	0
@@ -31,7 +31,7 @@ fHsimTaskFuncXmrsDbg               	0
 fHsimAllTaskFuncXmrs               	0
 fHsimDoXmrProcessing               	1
 fNoMergeDelays                     	0
-uGlblTimeUnit                      	4
+uGlblTimeUnit                      	16
 fHsimAllMtm                        	0
 fSimprofileNew                     	0
 fFsimFlag                          	0
@@ -964,7 +964,7 @@ fHsimMxConnFrc                     	0
 fHsimNewForceCbkVec                	0
 fHsimNewForceCbkVecDiag            	0
 fHsimMdbReplaceVpdHighConn         	1
-fHsimVpdHighConnReplaced           	0
+fHsimVpdHighConnReplaced           	1
 fHsimVpdOptSVTypes                 	1
 fHsimDlyInitFrc                    	0
 fHsimCompactVpdFn                  	1
