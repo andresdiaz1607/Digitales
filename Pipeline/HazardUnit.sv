@@ -3,7 +3,7 @@ module HazardDetectionUnit(
     input wire [4:0] IF_ID_RegisterRs2,
     input wire [4:0] ID_EX_RegisterRd,
     input wire ID_EX_MemRead,
-    input wire ID_EX_beq,
+    input wire zero,
     output reg IF_Flush,
     output reg PCWrite,
     output reg IF_ID_Write,
@@ -20,7 +20,7 @@ module HazardDetectionUnit(
 	  IF_Flush = 1'b0;
         end
 	
-	else if(ID_EX_beq) begin
+	else if(zero) begin
           PCWrite = 1'b1;
           IF_ID_Write = 1'b1;
           ControlMuxSel = 1'b1;

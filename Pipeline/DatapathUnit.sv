@@ -151,7 +151,7 @@ module Datapath_Unit#(Bits, MemSize, N, NumInst)(
        .Inmediato(im_ext));
 
     //Hazard Detection Unit
-    HazardDetectionUnit Unidad_de_riesgo (.IF_ID_RegisterRs1(reg_read_addr_1), .IF_ID_RegisterRs2(reg_read_addr_2), .ID_EX_RegisterRd(ID_EX_Rd), .ID_EX_MemRead(Ex_MemRead), .PCWrite(PCWrite), .IF_ID_Write(IF_ID_Write), .ControlMuxSel(ControlMuxSel), .IF_Flush(IF_Flush), .ID_EX_beq(Ex_Branch));
+    HazardDetectionUnit Unidad_de_riesgo (.IF_ID_RegisterRs1(reg_read_addr_1), .IF_ID_RegisterRs2(reg_read_addr_2), .ID_EX_RegisterRd(ID_EX_Rd), .ID_EX_MemRead(Ex_MemRead), .PCWrite(PCWrite), .IF_ID_Write(IF_ID_Write), .ControlMuxSel(ControlMuxSel), .IF_Flush(IF_Flush), .zero(zero_flag));
 
     //Mux de señales de control para meter stalls
     always_comb begin
@@ -226,7 +226,7 @@ module Datapath_Unit#(Bits, MemSize, N, NumInst)(
     forwarding_unit Unidad_de_Adelantamiento_1 (.id_ex_rs1(ID_EX_Rs1), .id_ex_rs2(ID_EX_Rs2), .ex_mem_rd(EX_MEM_Rd), .mem_wb_rd(MEM_WB_Rd), .ex_mem_regwrite(Mem_RegWrite), .mem_wb_regwrite(Wb_RegWrite), .forward_a(SelOpA), .forward_b(SelOpB));
     
     //Unidad de adelantamiento 2
-    forwarding_unit_2 Unidad_de_Adelantamiento_2 (.EX_MEM_MemWrite(Mem_MemWrite), .MEM_WB_RegWrite(Wb_RegWrite), .ID_EX_Rs1(ID_EX_Rs1), .ID_EX_Rs2(ID_EX_Rs2), .EX_MEM_Rd(EX_MEM_Rd), .Sel_A(Sel_1), .Sel_B(Sel_2));
+    forwarding_unit_2 Unidad_de_Adelantamiento_2 (.ID_EX_MemWrite(Ex_MemWrite), .EX_MEM_RegWrite(Mem_RegWrite), .ID_EX_Rs1(ID_EX_Rs1), .ID_EX_Rs2(ID_EX_Rs2), .EX_MEM_Rd(EX_MEM_Rd), .Sel_A(Sel_1), .Sel_B(Sel_2));
     
     //Muxes de operandos de ALU
     always_comb begin 
