@@ -113,7 +113,7 @@ module Datapath_Unit#(Bits, MemSize, N, NumInst)(
 
   //IF/ID Pipe
   always @(posedge clk or posedge rst or posedge IF_Flush)
-     if (rst || IF_Flush) begin
+     if (rst) begin
 	IF_ID_pc <= 32'b0;
         IF_ID_Instruction <= 32'b0;
      end 
@@ -121,6 +121,9 @@ module Datapath_Unit#(Bits, MemSize, N, NumInst)(
             IF_ID_pc <= pc_current;
             IF_ID_Instruction <= Instruction;
      end
+     else if (IF_Flush) begin
+	     IF_ID_Instruction <= 32'b0;
+       end
           
   //Instruction Decode Stage
   
@@ -151,7 +154,7 @@ module Datapath_Unit#(Bits, MemSize, N, NumInst)(
        .Inmediato(im_ext));
 
     //Hazard Detection Unit
-    HazardDetectionUnit Unidad_de_riesgo (.IF_ID_RegisterRs1(reg_read_addr_1), .IF_ID_RegisterRs2(reg_read_addr_2), .ID_EX_RegisterRd(ID_EX_Rd), .ID_EX_MemRead(Ex_MemRead), .PCWrite(PCWrite), .IF_ID_Write(IF_ID_Write), .ControlMuxSel(ControlMuxSel), .IF_Flush(IF_Flush), .beq(Ex_Branch) ,.zero(zero_flag));
+    HazardDetectionUnit Unidad_de_riesgo (.IF_ID_MemWrite(mem_write1),.IF_ID_RegisterRs1(reg_read_addr_1), .IF_ID_RegisterRs2(reg_read_addr_2), .ID_EX_RegisterRd(ID_EX_Rd), .ID_EX_MemRead(Ex_MemRead), .PCWrite(PCWrite), .IF_ID_Write(IF_ID_Write), .ControlMuxSel(ControlMuxSel), .IF_Flush(IF_Flush), .beq(Ex_Branch) ,.zero(zero_flag));
 
     //Mux de señales de control para meter stalls
     always_comb begin

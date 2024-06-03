@@ -5,17 +5,29 @@
         "module",
         1
     ],
-    "HazardDetectionUnit": [
-        "HazardDetectionUnit",
-        "ZTePI",
+    "MuxParam_0000": [
+        "MuxParam_0000",
+        "G8BQV",
         "module",
-        5
+        3
     ],
-    "tb_HazardDetectionUnit": [
-        "tb_HazardDetectionUnit",
-        "UusS1",
+    "hotbit_0000": [
+        "hotbit_0000",
+        "Yfz3H",
         "module",
-        4
+        2
+    ],
+    "Procesador_RISC_V": [
+        "Procesador_RISC_V",
+        "Cp3SF",
+        "module",
+        7
+    ],
+    "test_RISC_V": [
+        "test_RISC_V",
+        "KYJ9x",
+        "module",
+        8
     ],
     "...MASTER...": [
         "SIM",
